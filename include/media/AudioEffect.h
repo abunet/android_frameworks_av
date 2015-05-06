@@ -390,6 +390,10 @@ public:
       */
      static status_t guidToString(const effect_uuid_t *guid, char *str, size_t maxLen);
 
+     // kMaxPreProcessing is a reasonable value for the maximum number of preprocessing effects
+     // that can be applied simultaneously.
+     static const uint32_t kMaxPreProcessing = 10;
+
 protected:
      bool                    mEnabled;           // enable state
      int32_t                 mSessionId;         // audio session ID
